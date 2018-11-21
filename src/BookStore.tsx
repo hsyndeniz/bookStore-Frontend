@@ -3,6 +3,7 @@ import axios from 'axios';
 import BookList from './components/bookList';
 import SearchResults from './components/searchResults';
 import { Provider } from 'react-redux';
+import { Link } from 'react-router-dom';
 import store from './store';
 import './App.css';
 
@@ -52,6 +53,7 @@ class App extends React.Component<any, any> {
           <div id="main-container" className="main-container nav-effect-1">
             <div className="main clearfix">
               <div className="page-container">
+              <Link to='/create'><button style={{ float: "left", marginLeft: '6%', marginTop: 20 }}>Add Book</button></Link>
                 <div style={{ float: "right", marginTop: 10 }}>
                   <input 
                     type='search' placeholder={`Search in ${this.state.searchFilter}...`} 
